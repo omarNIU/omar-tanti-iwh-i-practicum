@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Custom Object Template
+        .content
+            a(href="/update-cobj") Add/Update this table
+            table
+                thead
+                    tr
+                        th.red Name
+                        th Issued By
+                        th Price
+                        th Level
+                tbody
+                    each certification in data
+                        tr
+                            td= certification.properties.name
+                            td= certification.properties.issued_by
+                            td= certification.properties.price
+                            td= certification.properties.level
