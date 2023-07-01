@@ -10,6 +10,10 @@ h1 {
     margin: 1rem;
 }
 
+.content{
+    margin: 1rem;
+}
+
 .cards {
     display: flex;
     align-items: center;
@@ -40,14 +44,18 @@ h1 {
     box-shadow: 3px 2px 6px lightgrey;
 }
 
-label, input {
+label, input, select {
     margin-top: 5px;
     display: block;
     font-size: inherit;
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"], select {
     padding: .25rem;
+}
+
+select{
+    min-width: 179px;
 }
 
 input[type="submit"] {
@@ -55,4 +63,20 @@ input[type="submit"] {
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+}
+
+table{
+
+}
+
+th{
+    background: #ffc1cb;
+}
+
+th,td{
+    padding: 5px;
+}
+
+td{
+    border: 1px solid;
 }

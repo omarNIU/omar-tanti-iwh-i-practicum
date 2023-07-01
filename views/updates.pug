@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1= `${title}`
+        .content
+            a(href="/") Return to the homepage
+            form(role='form' method='POST' action='/update-cobj')
+                div.form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text', name='name')
+                div.form-group
+                    label(for='issued_by') Issued By:
+                    input#issued_by.form-control(type='text', name='issued_by')
+                div.form-group
+                    label(for='price') Price:
+                    input#price.form-control(type='number', name='price', step='1', onkeypress="return event.charCode >= 48 && event.charCode <= 57")
+                div.form-group
+                    label(for='level') Level:
+                    select#level.form-control(name='level')
+                        option(value=Beginner) Beginner
+                        option(value=Intermediate) Intermediate
+                        option(value=Advanced) Advanced
+                input#submit(type="submit", value=Add)
